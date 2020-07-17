@@ -1,0 +1,28 @@
+version: '3.3'
+
+services:
+  auai:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: auai
+    container_name: auai
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - REACT_APP_API_URL=$REACT_APP_API_URL
+      - REACT_APP_STORAGE_KEY=$REACT_APP_STORAGE_KEY
+      - REACT_APP_ENV=$REACT_APP_ENV
+      - REACT_APP_ReCAPTCHA_SITE_KEY=$REACT_APP_ReCAPTCHA_SITE_KEY
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    networks:
+      - app-network
+    command: ./start.sh
+
+networks:
+  app-network:
+    driver: bridge
