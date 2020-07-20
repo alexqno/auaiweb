@@ -73,7 +73,7 @@ export default function Tables() {
   return (
     <React.Fragment>
       <Container>
-        <HeaderMain title="Listar Estabelecimentos" className="mb-5 mt-4" />
+        <HeaderMain title="Listar Atendimentos" className="mb-5 mt-4" />
 
         {/* START Section 9 */}
         <BlockUI>

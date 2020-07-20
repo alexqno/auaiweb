@@ -163,7 +163,7 @@ export default function Call() {
       const response = await auaiApi.put(`/calls/${protocolUpdate}`, data);
 
       notification('success', response.data.protocol, 'Atendimento salvo');
-      history.push('/call');
+      history.push('/call/list');
     } catch (error) {
       notification('error', 'Erro', error.response.data.error);
     }
