@@ -165,7 +165,11 @@ export default function Call() {
       notification('success', response.data.protocol, 'Atendimento salvo');
       history.push('/call/list');
     } catch (error) {
-      notification('error', 'Erro', error.response.data.error);
+      if (error.response) {
+        notification('error', 'Erro', error.response.data.error);
+      } else {
+        console.error(error);
+      }
     }
   }
 
