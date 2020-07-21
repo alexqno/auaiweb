@@ -113,7 +113,6 @@ export default function Call() {
         setProtocol(call.protocol);
 
         if (!_.isNil(call.clerk_id)) {
-          console.tron.log(call);
           setClerkId(call.clerk_id);
         }
         if (!_.isNil(call.customer_id)) {
@@ -159,7 +158,6 @@ export default function Call() {
     e.preventDefault();
     try {
       const data = await fillPageData();
-      console.tron.log(data);
       const response = await auaiApi.put(`/calls/${protocolUpdate}`, data);
 
       notification('success', response.data.protocol, 'Atendimento salvo');
