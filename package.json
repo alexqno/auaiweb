@@ -17,7 +17,7 @@
     "font-awesome": "^4.7.0",
     "history": "^4.10.1",
     "holderjs": "^2.9.6",
-    "immer": "^5.0.1",
+    "immer": "^9.0.6",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
